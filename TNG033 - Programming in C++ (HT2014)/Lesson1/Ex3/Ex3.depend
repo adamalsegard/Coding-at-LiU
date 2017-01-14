@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1415831107 source:c:\users\adam\documents\codeblocks\tng033\lesson1\ex3\list.cpp
+	"list.h"
+
+1415396560 c:\users\adam\documents\codeblocks\tng033\lesson1\ex3\list.h
+	<iostream>
+
+1384352548 source:c:\users\adam\documents\codeblocks\tng033\lesson1\ex3\main.cpp
+	<iostream>
+	<iomanip>
+	<iostream>
+	"list.h"
+

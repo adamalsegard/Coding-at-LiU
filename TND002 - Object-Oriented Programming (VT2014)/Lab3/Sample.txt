@@ -1,0 +1,22 @@
+Class String, class StringBuffer and class Character 
+from the java.lang package and class StringTokenizer 
+from the java.util package provide the foundation for 
+string and character processing in Java.
+
+Class String provides many capabilities for processing 
+strings, including creating strings, comparing strings, 
+locating and extracting substrings, and concatenating 
+strings.
+
+However, once a String object is created, its contents 
+can not change. Class StringBuffer therefore provides 
+capabilities for creating and manipulating dynamic 
+strings, that is, strings that can change.
+
+Class Character is the type-wrapper class for the built-in 
+data type char, and provides many capabilities for processing 
+characters, including testing and converting characters.
+
+Class StringTokenizer, finally, provides capabilities 
+for breaking a string into tokens, that is, individual 
+substrings, each of which conveys meaning to you.

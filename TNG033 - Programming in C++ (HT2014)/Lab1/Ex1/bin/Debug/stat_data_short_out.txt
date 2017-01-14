@@ -1,0 +1,15 @@
+Sequence size = 15
+
+List of values not sorted
+83   91   57   18   96   16   49   27   5   59   
+72   80   89   87   26   
+
+List of sorted values
+5   16   18   26   27   49   57   59   72   80   
+83   87   89   91   96   
+
+
+Max = 96 and Min = 5
+Average = 57
+Median = 59
+Standard deviation = 30.4039

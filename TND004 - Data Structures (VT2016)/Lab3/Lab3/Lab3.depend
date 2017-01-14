@@ -1,0 +1,41 @@
+# depslib dependency file v1.0
+1463417765 source:h:\tnd004\lab3\lab3\test1.cpp
+	<iostream>
+	<vector>
+	"BinarySearchTree.h"
+
+1463488737 h:\tnd004\lab3\lab3\binarysearchtree.h
+	"dsexceptions.h"
+	<algorithm>
+	<memory>
+	<iomanip>
+
+1462346671 h:\tnd004\lab3\lab3\dsexceptions.h
+
+1463417904 source:h:\tnd004\lab3\lab3\test2.cpp
+	<iostream>
+	<vector>
+	"BinarySearchTree.h"
+
+1463417649 source:h:\tnd004\lab3\lab3\test3.cpp
+	<iostream>
+	<vector>
+	<iterator>
+	<fstream>
+	"BinarySearchTree.h"
+
+1463420093 source:h:\tnd004\lab3\lab3\freqtable.cpp
+	<iostream>
+	<string>
+	<iomanip>
+	<algorithm>
+	<fstream>
+	<random>
+	"BinarySearchTree.h"
+	"WordEntry.h"
+
+1463420261 h:\tnd004\lab3\lab3\wordentry.h
+	<string>
+	<ostream>
+	<iomanip>
+

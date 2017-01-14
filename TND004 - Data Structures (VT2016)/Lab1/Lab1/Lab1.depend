@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1461072191 source:h:\tnd004\lab 1\lab1\main.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"set.h"
+
+1461137620 h:\tnd004\lab 1\lab1\set.h
+	<memory>
+	<iostream>
+	<string>
+
+1461072191 source:h:\tnd004\lab1\lab1\main.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"set.h"
+
+1461240530 h:\tnd004\lab1\lab1\set.h
+	<memory>
+	<iostream>
+	<string>
+

@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1416941830 source:c:\users\adam\documents\adam\mt\kurser\tng033\lesson2 -files\code\set\set.cpp
+	"set.h"
+	<iomanip>
+	<sstream>
+	<new>
+	<cassert>
+
+1416940729 c:\users\adam\documents\adam\mt\kurser\tng033\lesson2 -files\code\set\set.h
+	<iostream>
+
+1416941714 source:c:\users\adam\documents\adam\mt\kurser\tng033\lesson2 -files\code\set\test_set.cpp
+	"set.h"
+	<iostream>
+	<iomanip>
+

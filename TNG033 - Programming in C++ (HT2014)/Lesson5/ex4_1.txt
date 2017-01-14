@@ -1,0 +1,33 @@
+TEST PHASE 0
+Programming course: *Graph Algorithms* uses programming language R++.
+Programming course: *Scripting languages* uses programming language PHP.
+
+TEST PHASE 1
+The course *Scripting languages* has changed programming language to *JavaScript*
+There are two courses with different programming languages.
+
+TEST PHASE 2
+Course in descrete math: *Game Theory*.
+Math course: *Fourier Transform*.
+
+There is a course in discrete mathematics!
+
+TEST PHASE 3
+
+Programming course: *Introduction to programming* uses programming language C++.
+
+Course in descrete math: *Graph theory*.
+
+Math course: *Calculus*.
+
+TEST PHASE 4
+Number of courses: 7
+
+Programming course: *Scripting languages* uses programming language *JavaScript*.
+
+Number of courses: 8
+
+TEST PHASE 5
+Deleting some courses
+
+Number of courses: 5
