@@ -1,0 +1,10 @@
+Number of words = 22
+
+-- ANAGRAMS --
+
+dreaming, margined, midrange, --> 3words.
+kale, lake, leak, --> 3words.
+earls, laser, rales, reals, seral, lares, --> 6words.
+kitchen, thicken, --> 2words.
+compiler, complier, --> 2words.
+hist, hits, shit, this, --> 4words.

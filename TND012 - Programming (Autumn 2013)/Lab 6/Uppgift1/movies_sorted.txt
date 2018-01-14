@@ -1,0 +1,44 @@
+Apocalypse Now
+drama
+    2
+    0
+Artur
+comedi
+    2
+    0
+Blade Runner
+action
+    2
+    0
+Dracula
+thriller
+    4
+    0
+Fight Club
+drama
+    4
+    0
+Matrix
+action
+    3
+    0
+Monty Python and the Holy Grail
+comedi
+    4
+    0
+Seven
+drama
+    1
+    0
+Taxi Driver
+drama
+    1
+    0
+Tootsie
+comedi
+    2
+    0
+Zombies
+horror
+    4
+    0

@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1415786403 source:c:\users\adam\documents\codeblocks\tng033\lesson1\ex1\ex1.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	<sstream>
+	<cmath>
+

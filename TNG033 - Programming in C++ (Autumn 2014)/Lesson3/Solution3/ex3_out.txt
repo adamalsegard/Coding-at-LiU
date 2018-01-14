@@ -1,0 +1,44 @@
+Do nothing piano ...
+
+Instrument       Quantity
+============================
+Yamaha              2
+
+Do nothing flute...
+
+Instrument       Quantity
+============================
+Yamaha              1
+PureTone            2
+
+Do nothing piano ...
+
+Instrument       Quantity
+============================
+Yamaha              1
+PureTone            1
+Stradivarius        1
+Bach                2
+
+Instrument       Quantity
+============================
+Yamaha              1
+PureTone            1
+Stradivarius        1
+Bach                1
+
+Do nothing flute...
+
+Instrument       Quantity
+============================
+Yamaha              1
+PureTone            3
+Stradivarius        0
+Bach                1
+
+Instrument       Quantity
+============================
+Yamaha              1
+PureTone            2
+Stradivarius        0
+Bach                1

@@ -1,0 +1,144 @@
+<?xml version="1.0" ?>
+<VoreenData version="1">
+    <Workspace version="2" GlobalDescription="">
+        <VolumeContainer>
+            <VolumeHandles />
+        </VolumeContainer>
+        <ProcessorNetwork version="11">
+            <MetaData>
+                <MetaItem name="ProcessorSelection" type="SelectionMetaData::Processor">
+                    <values>
+                        <item type="TNMParallelCoordinates" ref="ref1" />
+                    </values>
+                </MetaItem>
+            </MetaData>
+            <Processors>
+                <Processor type="TNMCSVLoader" name="TNMCSVLoader" id="ref0">
+                    <MetaData>
+                        <MetaItem name="ProcessorGraphicsItem" type="PositionMetaData" x="-124" y="-237" />
+                    </MetaData>
+                    <Properties>
+                        <Property name="file" value="../cars_data.csv" />
+                        <Property name="load" />
+                    </Properties>
+                    <InteractionHandlers />
+                </Processor>
+                <Processor type="TNMScatterPlot" name="TNMScatterPlot" id="ref2">
+                    <MetaData>
+                        <MetaItem name="ProcessorGraphicsItem" type="PositionMetaData" x="-230" y="-72" />
+                    </MetaData>
+                    <Properties>
+                        <Property name="brushingIndices" id="ref5" />
+                        <Property name="firstAxis" value="0" />
+                        <Property name="linkingIndices" id="ref7" />
+                        <Property name="pointSize" value="2" />
+                        <Property name="secondAxis" value="1" />
+                    </Properties>
+                    <InteractionHandlers />
+                </Processor>
+                <Processor type="Canvas" name="Canvas" id="ref4">
+                    <MetaData>
+                        <MetaItem name="ProcessorGraphicsItem" type="PositionMetaData" x="25" y="61" />
+                        <MetaItem name="ProcessorWidget" type="WindowStateMetaData" visible="false" x="396" y="453" width="791" height="545" />
+                    </MetaData>
+                    <Properties>
+                        <Property name="canvasSize">
+                            <value x="791" y="545" />
+                        </Property>
+                        <Property name="showCursor" value="true" />
+                    </Properties>
+                    <InteractionHandlers />
+                </Processor>
+                <Processor type="TNMParallelCoordinates" name="TNMParallelCoordinates" id="ref1">
+                    <MetaData>
+                        <MetaItem name="ProcessorGraphicsItem" type="PositionMetaData" x="76" y="-101" />
+                    </MetaData>
+                    <Properties>
+                        <Property name="brushingIndices" id="ref6" />
+                        <Property name="colorMethod" value="0" />
+                        <Property name="font" fontType="&lt;unknown&gt;" fontSize="1" fontName="" textAlignment="&lt;unknown&gt;" verticalTextAlignment="&lt;unknown&gt;" lineWidth="1" />
+                        <Property name="linkingIndices" id="ref8" />
+                        <Property name="mouse.click" lod="1" enabled="true" mouseAction="6" mouseButtons="1" keyCode="0" modifier="0" shareEvents="false" />
+                        <Property name="mouse.move" lod="1" enabled="true" mouseAction="1" mouseButtons="1" keyCode="0" modifier="0" shareEvents="false" />
+                        <Property name="mouse.release" lod="1" enabled="true" mouseAction="4" mouseButtons="1" keyCode="0" modifier="0" shareEvents="false" />
+                    </Properties>
+                    <InteractionHandlers />
+                </Processor>
+                <Processor type="Canvas" name="Canvas 2" id="ref3">
+                    <MetaData>
+                        <MetaItem name="ProcessorGraphicsItem" type="PositionMetaData" x="-208" y="53" />
+                        <MetaItem name="ProcessorWidget" type="WindowStateMetaData" visible="false" x="4" y="190" width="388" height="391" />
+                    </MetaData>
+                    <Properties>
+                        <Property name="canvasSize">
+                            <value x="388" y="391" />
+                        </Property>
+                        <Property name="showCursor" value="true" />
+                    </Properties>
+                    <InteractionHandlers />
+                </Processor>
+            </Processors>
+            <Connections>
+                <Connection>
+                    <Outport name="out.data">
+                        <Processor type="TNMCSVLoader" ref="ref0" />
+                    </Outport>
+                    <Inport name="in.data">
+                        <Processor type="TNMParallelCoordinates" ref="ref1" />
+                    </Inport>
+                </Connection>
+                <Connection>
+                    <Outport name="out.data">
+                        <Processor type="TNMCSVLoader" ref="ref0" />
+                    </Outport>
+                    <Inport name="in.data">
+                        <Processor type="TNMScatterPlot" ref="ref2" />
+                    </Inport>
+                </Connection>
+                <Connection>
+                    <Outport name="out.image">
+                        <Processor type="TNMScatterPlot" ref="ref2" />
+                    </Outport>
+                    <Inport name="image.input">
+                        <Processor type="Canvas" ref="ref3" />
+                    </Inport>
+                </Connection>
+                <Connection>
+                    <Outport name="out.image">
+                        <Processor type="TNMParallelCoordinates" ref="ref1" />
+                    </Outport>
+                    <Inport name="image.input">
+                        <Processor type="Canvas" ref="ref4" />
+                    </Inport>
+                </Connection>
+            </Connections>
+            <CoProcessorConnections />
+            <PropertyLinks>
+                <PropertyLink>
+                    <SourceProperty ref="ref5" />
+                    <DestinationProperty ref="ref6" />
+                    <Evaluator type="LinkEvaluatorId" />
+                </PropertyLink>
+                <PropertyLink>
+                    <SourceProperty ref="ref6" />
+                    <DestinationProperty ref="ref5" />
+                    <Evaluator type="LinkEvaluatorId" />
+                </PropertyLink>
+                <PropertyLink>
+                    <SourceProperty ref="ref7" />
+                    <DestinationProperty ref="ref8" />
+                    <Evaluator type="LinkEvaluatorId" />
+                </PropertyLink>
+                <PropertyLink>
+                    <SourceProperty ref="ref8" />
+                    <DestinationProperty ref="ref7" />
+                    <Evaluator type="LinkEvaluatorId" />
+                </PropertyLink>
+            </PropertyLinks>
+            <PropertyStateCollections />
+            <PropertyStateFileReferences />
+            <PropertyStateDirectoryReferences />
+        </ProcessorNetwork>
+        <Animation />
+    </Workspace>
+</VoreenData>

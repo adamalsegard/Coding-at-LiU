@@ -1,12 +1,36 @@
-# Coding-at-LiU
-Compilation of my coding assignments and labs at Linköping University
+﻿# Coding-at-LiU
+Compilation of my coding assignments and labs at Linköping University.
 
-## Summary of courses, descending order
+## Summary of courses, in descending order
 
-(For AY16/17 see NUS-Modules repo)
+### Spring 2018 - Master thesis
+I worked on my master thesis for the entire spring semester.
 
 
-### VT 2016
+### Autumn 2017
+
+#### TNM067 - Scientific Visualization
+4 different labs with different visualization techniques, such as volume rendering. All work was done with the in-house visualization program Inviwo. 
+
+#### TNM084 - Procedural Images
+A course in 'Demo programming'. How to write shaders that generate procedural digital images. 4 labs with different programming languages (C, RSL, GLSL, Terragen). There was also an individual project.
+
+#### TDDE01 - Machine Learning
+3 labs with a total of 8 assignments to be solved with R in R-studio. A graded report had to be turned in after every lab. 
+
+###### See also: 
+* https://github.com/adamalsegard/AI-maze_me (TNM095 - AI for Interactive Media) 
+* https://github.com/adamalsegard/ShatteringWood (TNCG13 - SFX: Tricks of the Trade)
+* https://github.com/adamalsegard/ProceduralAtmosphere (TNM084 - Procedural Images)
+
+###### No concurrent unmentioned courses
+
+
+### For Academic Year 16/17 see the 'NUS-Modules' repo
+I studied one year abroad, at the National University of Singapore.
+
+
+### Spring 2016
 
 #### TND004 - Data Structures
 Introduction to templates, doubly-linked lists, hash tables, binary trees and more. Implementation in C++.
@@ -18,13 +42,13 @@ Introduction to templates, doubly-linked lists, hash tables, binary trees and mo
 ###### No concurrent unmentioned courses
 
 
-### HT 2015
+### Autumn 2015
 
 #### TNM087 - Image Processing and Analysis
 Image processing labs in Matlab.
 
 #### TNM093 - Practical Data Visualization and Virtual Reality
-Coming soon...
+Four labs in total, 2 in visualization and 2 in VR (Haptic and HMD).
 
 ###### See also: 
 * https://github.com/codingInSpace/reverbify (TFYA65 - Physics of Sound)
@@ -34,7 +58,7 @@ Coming soon...
 * TNG022 - Modelling and Simulation
 
 
-### VT 2015
+### Spring 2015
 
 #### TNM061 - 3D Computer Graphics
 Two labs in 3D graphics. Lab 5 in Java3D and lab 6 in OpenGL. The first 4 labs where exercises in 3Ds Max.
@@ -51,7 +75,7 @@ Image processing in Matlab.
 * TNG015 - Signals and Systems
 
 
-### HT 2014
+### Autumn 2014
 
 #### TNG033 - Programming in C++
 Continuation in C++ programming.
@@ -65,7 +89,7 @@ Continuation in C++ programming.
 * TNA007 - Vector Analysis
 
 
-### VT 2014
+### Spring 2014
 
 #### TND002 - Object-Oriented Programming
 OOP in Java.
@@ -79,7 +103,7 @@ Introduction to OpenGL.
 * TNA005 - Applied Mathematics in Science and Technology
 
 
-### HT 2013
+### Autumn 2013
 
 #### TND012 - Programming 
 Introduction to programming in C++.

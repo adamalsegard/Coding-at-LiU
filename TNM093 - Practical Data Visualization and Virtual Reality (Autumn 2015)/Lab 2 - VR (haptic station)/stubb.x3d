@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+Copyright 2013, Karljohan Lundin Palmerius
+
+This is a stubb for laborations on multi-modal display
+systems in the VR laboratory. It will disable the X3D
+navigation to allow for viewpoint calibration and tracking,
+and load libraries commonly used in the VR laboratory.
+
+-->
+<Group>
+  
+  <PythonScript url="urn:candy:python/CorrectViewpoint.py"/>
+  
+  <PythonScript url="urn:candy:python/AutoLoadSO.py"/>
+  
+  <PythonScript url="urn:candy:python/AutoLoadSO.py">
+    <MetadataString
+        name="library" value="vhtk" containerField="references"/>
+  </PythonScript>
+  
+  <PythonScript DEF = "Converter" url="urn:candy:python/MFtoSFBool.py"/>
+  <PythonScript DEF = "Converter1" url="urn:candy:python/MFtoSFBool.py"/>
+  
+  
+  
+  <Viewpoint position="0 0 0.5" orientation="0 0 1 0" description="Default H3D Viewpoint"/>
+  
+  <Viewpoint position="-1 0.5 0.5" orientation="-1 1 0 0.35" description="Acute H3D Viewpoint"/>
+    
+  <SMViewpoint position="0 0 0.7" orientation="1 0 0 0" screenLowerLeft = "-0.25 -0.15 0" screenUpperRight = "0.25 0.15 0" description = "Default HVR SMViewpoint" />
+  
+  <!-- STOL -->
+  <Transform translation="0 0 0" rotation = "1 1 0 0.785" scale="0.5 0.5 0.5">
+    
+    <Transform>
+      <Shape DEF="Platta">
+	<Appearance DEF="WOOD">
+	  <Material diffuseColor="1 0.7 0.5" />
+	  <FrictionalSurface useRelativeValues = "false" stiffness = "1200" staticFriction ="0.4" dynamicFriction = "0.2"/>
+	</Appearance>
+	<Box size = "0.1 0.01 0.1"/>
+      </Shape>
+    </Transform>
+    
+    <Transform rotation="1 0 0 1.57" translation="0 0.045 -0.045">
+      <Shape>
+	<Appearance USE="WOOD"/>
+	 <Box size = "0.1 0.01 0.1"/>
+      </Shape>
+    </Transform>
+  
+    <Transform translation="0.045 -0.051 0.045 ">
+      <Shape DEF="Ben">
+	<Appearance USE="WOOD"/>
+	<Cylinder radius = "0.005" height = "0.1"/> 
+      </Shape>
+    </Transform>
+    
+    <Transform translation="-0.045 -0.051 0.045">
+      <Shape USE="Ben" />
+    </Transform>
+    
+    <Transform translation="0.045 -0.051 -0.045">
+      <Shape USE="Ben" />
+    </Transform>
+    
+    <Transform translation="-0.045 -0.051 -0.045">
+      <Shape USE="Ben" />
+    </Transform>
+  </Transform>  
+    
+    <!-- MUSSE PIG -->
+  <Transform translation="-0.12 -0.01 0">
+    
+    <Transform translation="0.015 0.02 0">
+      <Shape DEF = "Kula">
+	<Appearance DEF = "MUSSE">
+	  <Material  diffuseColor="1 1 1" specularColor="0.1 0.1 0.1"/>
+	  <FrictionalSurface useRelativeValues = "false" staticFriction = "1" dynamicFriction="0.8" damping="5" stiffness ="100"/>
+	</Appearance>
+	<Sphere radius = "0.01"/> 
+      </Shape>
+    </Transform>
+    
+    <Transform translation="-0.015 0.02 0">
+      <Shape USE = "Kula"/>
+    </Transform>
+    
+    <Transform translation="0 0 0">
+      <Shape>
+	<Appearance USE="MUSSE"/>
+	<Sphere DEF="mus" radius = "0.02"/> 
+      </Shape>
+    </Transform>
+  </Transform>
+  
+      
+  <!-- SPEGEL -->
+  <Transform translation="0.13 -0.02 0" rotation = "0 1 0 -0.7">
+    
+    <Transform>
+      <Shape DEF="Spegel">
+	<Appearance DEF="SPEGELGLAS">
+	  <Material specularColor="1 1 1" diffuseColor="0.3 0.3 0.3"/>
+	  <SmoothSurface useRelativeValues = "false" stiffness = "1500" damping="0"/>
+	</Appearance>
+	<Box DEF="MIRROR" size = "0.05 0.1 0.001"/>
+      </Shape>
+    </Transform>
+    
+  </Transform>
+  
+
+    <VRSound spatialize="true">
+      <ReverbSoundEffect DEF="soundfilter" parametersPreset = "SPACESTATION_LARGEROOM"/>
+      <AudioClip DEF="plingGlasVR" description="plingGlas" url="glas.wav"/>
+    </VRSound>
+   
+   <Sound spatialize="true"> 
+      <AudioClip DEF="plingGlas" description="plingGlas" url="glas.wav"/>
+    </Sound>
+   
+    <Sound> 
+      <AudioClip DEF="gun" description="fun" url="pistol.wav"/>
+    </Sound>
+    
+    <VRSound>
+      <ReverbSoundEffect DEF="soundfilter" parametersPreset = "CHAPEL"/>
+      <AudioClip DEF="gunVR" description="fun" url="pistol.wav"/>
+    </VRSound>
+  
+
+    <BooleanFilter DEF="Filter" />
+    <TimeTrigger DEF="Trigger" />
+    
+    <ROUTE fromNode = "mus" fromField = "isTouched"
+	   toNode = "Converter" toField = "value" />
+    
+    <ROUTE fromNode = "Converter" fromField = "value"
+	   toNode = "Filter" toField = "set_boolean" />
+    
+    <ROUTE fromNode = "Filter" fromField = "inputTrue"
+	   toNode = "Trigger" toField = "set_boolean" />
+    
+    <ROUTE fromNode = "Trigger" fromField = "triggerTime"
+	   toNode = "gunVR" toField = "startTime" />
+    
+    <BooleanFilter DEF="Filter1" />
+    <TimeTrigger DEF="Trigger1" />
+  
+    <ROUTE fromNode = "MIRROR" fromField = "isTouched"
+	   toNode = "Converter1" toField = "value" />
+    
+    <ROUTE fromNode = "Converter1" fromField = "value"
+	   toNode = "Filter1" toField = "set_boolean" />
+    
+    <ROUTE fromNode = "Filter1" fromField = "inputTrue"
+	   toNode = "Trigger1" toField = "set_boolean" />
+    
+    <ROUTE fromNode = "Trigger1" fromField = "triggerTime"
+	   toNode = "plingGlasVR" toField = "startTime" />
+    
+   
+    <!-- http://staffwww.itn.liu.se/~karlu/work/Candy/classHVR_1_1ReverbSoundEffect.html#a1c166b7b765691f67427a7c44c339e00 
+    -->
+    
+  
+</Group>

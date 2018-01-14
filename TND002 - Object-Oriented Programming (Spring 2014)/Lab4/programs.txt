@@ -1,0 +1,4 @@
+ED     Elektronikdesign
+KTS    Kommunikation och transport
+MT     Medieteknik
+OI     Oppen ingang

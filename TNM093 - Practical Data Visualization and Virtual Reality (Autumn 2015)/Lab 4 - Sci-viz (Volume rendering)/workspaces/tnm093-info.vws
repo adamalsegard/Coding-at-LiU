@@ -1,0 +1,174 @@
+<?xml version="1.0" ?>
+<VoreenData version="1">
+    <Workspace version="2" GlobalDescription="">
+        <VolumeContainer>
+            <VolumeHandles />
+        </VolumeContainer>
+        <ProcessorNetwork version="11">
+            <MetaData>
+                <MetaItem name="ProcessorSelection" type="SelectionMetaData::Processor">
+                    <values>
+                        <item type="TNMParallelCoordinates" ref="ref2" />
+                    </values>
+                </MetaItem>
+            </MetaData>
+            <Processors>
+                <Processor type="TNMCSVLoader" name="TNMCSVLoader" id="ref0">
+                    <MetaData>
+                        <MetaItem name="ProcessorGraphicsItem" type="PositionMetaData" x="-454" y="-552" />
+                    </MetaData>
+                    <Properties>
+                        <Property name="file" type="FileDialogProperty" guiName="CSV File" value="../cars_data.csv" />
+                        <Property name="load" type="ButtonProperty" guiName="Load" />
+                    </Properties>
+                    <InteractionHandlers />
+                </Processor>
+                <Processor type="TNMParallelCoordinates" name="TNMParallelCoordinates" id="ref2">
+                    <MetaData>
+                        <MetaItem name="ProcessorGraphicsItem" type="PositionMetaData" x="-401" y="-415" />
+                    </MetaData>
+                    <Properties>
+                        <Property name="brushingIndices" guiName="Brushing Indices" id="ref7" />
+                        <Property name="colorMethod" type="IntOptionProperty" guiName="Coloing Method" value="0">
+                            <keys>
+                                <item value="0" />
+                                <item value="1" />
+                                <item value="2" />
+                                <item value="3" />
+                                <item value="4" />
+                                <item value="5" />
+                            </keys>
+                        </Property>
+                        <Property name="linkingIndices" guiName="Linking Indices" id="ref5" />
+                        <Property name="mouse.click" guiName="Mouse Click" lod="1" enabled="true" mouseAction="6" mouseButtons="1" keyCode="0" modifier="0" shareEvents="false" />
+                        <Property name="mouse.move" guiName="Mouse Move" lod="1" enabled="true" mouseAction="1" mouseButtons="1" keyCode="0" modifier="0" shareEvents="false" />
+                        <Property name="mouse.release" guiName="Mouse Release" lod="1" enabled="true" mouseAction="4" mouseButtons="1" keyCode="0" modifier="0" shareEvents="false" />
+                    </Properties>
+                    <InteractionHandlers />
+                </Processor>
+                <Processor type="TNMScatterPlot" name="TNMScatterPlot" id="ref1">
+                    <MetaData>
+                        <MetaItem name="ProcessorGraphicsItem" type="PositionMetaData" x="-526" y="-416" />
+                    </MetaData>
+                    <Properties>
+                        <Property name="brushingIndices" guiName="Brushing Indices" id="ref8" />
+                        <Property name="firstAxis" type="IntOptionProperty" guiName="First Axis" value="0">
+                            <keys>
+                                <item value="0" />
+                                <item value="1" />
+                                <item value="2" />
+                                <item value="3" />
+                                <item value="4" />
+                                <item value="5" />
+                            </keys>
+                        </Property>
+                        <Property name="linkingIndices" guiName="Linking Indices" id="ref6" />
+                        <Property name="pointSize" type="IntegerProperty" guiName="Point Size" value="4" minValue="1" maxValue="5" />
+                        <Property name="secondAxis" type="IntOptionProperty" guiName="Second Axis" value="0">
+                            <keys>
+                                <item value="0" />
+                                <item value="1" />
+                                <item value="2" />
+                                <item value="3" />
+                                <item value="4" />
+                                <item value="5" />
+                            </keys>
+                        </Property>
+                    </Properties>
+                    <InteractionHandlers />
+                </Processor>
+                <Processor type="Canvas" name="Canvas" id="ref4">
+                    <MetaData>
+                        <MetaItem name="ProcessorGraphicsItem" type="PositionMetaData" x="-516" y="-313" />
+                        <MetaItem name="ProcessorWidget" type="WindowStateMetaData" visible="true" x="2155" y="193" width="750" height="750" />
+                    </MetaData>
+                    <Properties>
+                        <Property name="canvasSize" type="IntVec2Property" guiName="Canvas Size">
+                            <value x="750" y="750" />
+                            <minValue x="32" y="32" />
+                            <maxValue x="16384" y="16384" />
+                        </Property>
+                        <Property name="showCursor" type="BoolProperty" guiName="Show Cursor" value="true" />
+                    </Properties>
+                    <InteractionHandlers />
+                </Processor>
+                <Processor type="Canvas" name="Canvas 2" id="ref3">
+                    <MetaData>
+                        <MetaItem name="ProcessorGraphicsItem" type="PositionMetaData" x="-368" y="-312" />
+                        <MetaItem name="ProcessorWidget" type="WindowStateMetaData" visible="true" x="2932" y="199" width="750" height="750" />
+                    </MetaData>
+                    <Properties>
+                        <Property name="canvasSize" type="IntVec2Property" guiName="Canvas Size">
+                            <value x="750" y="750" />
+                            <minValue x="32" y="32" />
+                            <maxValue x="16384" y="16384" />
+                        </Property>
+                        <Property name="showCursor" type="BoolProperty" guiName="Show Cursor" value="true" />
+                    </Properties>
+                    <InteractionHandlers />
+                </Processor>
+            </Processors>
+            <Connections>
+                <Connection>
+                    <Outport name="out.data">
+                        <Processor type="TNMCSVLoader" ref="ref0" />
+                    </Outport>
+                    <Inport name="in.data">
+                        <Processor type="TNMScatterPlot" ref="ref1" />
+                    </Inport>
+                </Connection>
+                <Connection>
+                    <Outport name="out.data">
+                        <Processor type="TNMCSVLoader" ref="ref0" />
+                    </Outport>
+                    <Inport name="in.data">
+                        <Processor type="TNMParallelCoordinates" ref="ref2" />
+                    </Inport>
+                </Connection>
+                <Connection>
+                    <Outport name="out.image">
+                        <Processor type="TNMParallelCoordinates" ref="ref2" />
+                    </Outport>
+                    <Inport name="image.input">
+                        <Processor type="Canvas" ref="ref3" />
+                    </Inport>
+                </Connection>
+                <Connection>
+                    <Outport name="out.image">
+                        <Processor type="TNMScatterPlot" ref="ref1" />
+                    </Outport>
+                    <Inport name="image.input">
+                        <Processor type="Canvas" ref="ref4" />
+                    </Inport>
+                </Connection>
+            </Connections>
+            <CoProcessorConnections />
+            <PropertyLinks>
+                <PropertyLink>
+                    <SourceProperty ref="ref5" />
+                    <DestinationProperty ref="ref6" />
+                    <Evaluator type="LinkEvaluatorId" />
+                </PropertyLink>
+                <PropertyLink>
+                    <SourceProperty ref="ref6" />
+                    <DestinationProperty ref="ref5" />
+                    <Evaluator type="LinkEvaluatorId" />
+                </PropertyLink>
+                <PropertyLink>
+                    <SourceProperty ref="ref7" />
+                    <DestinationProperty ref="ref8" />
+                    <Evaluator type="LinkEvaluatorId" />
+                </PropertyLink>
+                <PropertyLink>
+                    <SourceProperty ref="ref8" />
+                    <DestinationProperty ref="ref7" />
+                    <Evaluator type="LinkEvaluatorId" />
+                </PropertyLink>
+            </PropertyLinks>
+            <PropertyStateCollections />
+            <PropertyStateFileReferences />
+            <PropertyStateDirectoryReferences />
+        </ProcessorNetwork>
+        <Animation />
+    </Workspace>
+</VoreenData>

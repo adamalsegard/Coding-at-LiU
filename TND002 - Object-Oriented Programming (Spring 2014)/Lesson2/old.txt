@@ -1,0 +1,4 @@
+ailurophobia        cats
+cynophobia          dogs
+hippophobia         horses
+musophobia          mice

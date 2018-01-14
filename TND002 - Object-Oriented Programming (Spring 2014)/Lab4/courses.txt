@@ -1,0 +1,10 @@
+TSA001 Linjar algebra
+TSA002 Analys I
+TSA003 Analys II
+TSD001 Programmering
+TSE001 Mikroelektronik 
+TSE002 Makroelektronik
+TSK001 Kommunikation
+TSK002 Transport
+TSM001 1-D Datorgrafik
+TSM002 2-D Datorgrafik

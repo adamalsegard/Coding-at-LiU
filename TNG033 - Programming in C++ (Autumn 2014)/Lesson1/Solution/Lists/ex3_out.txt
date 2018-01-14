@@ -1,0 +1,19 @@
+L:  List is empty!!
+
+Inserting ...
+L: 10->15->20->30->
+
+Searching ...
+Found 10
+Found 30
+40 not found!!
+Found 15
+
+Insert sorted ...
+L: 8->10->15->20->23->30->32->
+
+Removing ...
+L: 10->15->23->30->
+
+Insert last ...
+L: 10->15->23->30->30->23->15->

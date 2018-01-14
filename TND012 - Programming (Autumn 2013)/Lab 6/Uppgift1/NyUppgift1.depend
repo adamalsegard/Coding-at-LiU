@@ -1,0 +1,43 @@
+# depslib dependency file v1.0
+1381312875 source:h:\lab\lab 6\ex1\nyuppgift1\main1.cpp
+	<iostream>
+	<fstream>
+	"movies.h"
+
+1381312476 h:\lab\lab 6\ex1\nyuppgift1\movies.h
+	<iostream>
+	<iomanip>
+	<string>
+	<fstream>
+
+1381741198 source:h:\lab\lab 6\ex1\nyuppgift1\movies.cpp
+	"movies.h"
+
+1381742187 source:c:\users\adaal265\desktop\lab6\lab 6\ex1\nyuppgift1\movies.cpp
+	"movies.h"
+
+1381312476 c:\users\adaal265\desktop\lab6\lab 6\ex1\nyuppgift1\movies.h
+	<iostream>
+	<iomanip>
+	<string>
+	<fstream>
+
+1381742874 source:c:\users\adaal265\desktop\lab6\lab 6\ex1\nyuppgift1\main1.cpp
+	<iostream>
+	<fstream>
+	"movies.h"
+
+1381853351 source:h:\lab\lab 6\nyuppgift1\movies.cpp
+	"movies.h"
+
+1381851626 h:\lab\lab 6\nyuppgift1\movies.h
+	<iostream>
+	<iomanip>
+	<string>
+	<fstream>
+
+1381854458 source:h:\lab\lab 6\nyuppgift1\main1.cpp
+	<iostream>
+	<fstream>
+	"movies.h"
+

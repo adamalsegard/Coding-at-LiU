@@ -1,0 +1,85 @@
+<?xml version="1.0" ?>
+<Cluster masterAddress="127.0.0.1">
+  
+  <Node address="127.0.0.1" port="20401">
+    <Window fullscreen="true" border="false" monitor="1" numberOfSamples="4">
+      <Stereo type="checkerboard" />
+      <Pos x="0" y="0" />
+      <Size x="1024" y="576" />
+      <Viewport tracked="true">
+        <Pos x="0.0" y="0.0" />
+        <Size x="1.0" y="1.0" />
+        <Viewplane>
+          <Pos x="-0.84914" y="-0.5495" z="-0.235" />
+          <Pos x="-0.84914" y=" 0.4135" z="-0.235" />
+          <Pos x=" 0.84114" y=" 0.4135" z="-0.235" />
+        </Viewplane>
+      </Viewport>
+    </Window>
+  </Node>
+  
+  <Node address="127.0.0.2" port="20402">
+    <Window fullscreen="false">
+      <Stereo type="none" />
+      <Pos x="0" y="0" />
+      <Size x="1024" y="1024" />
+      <Viewport user="topUser"><!-- Top View -->
+        <Pos  x="0.0" y="0.5" />
+        <Size x="0.5" y="0.5" />
+        <Viewplane>
+          <Pos x="-1.0" y=" 0.0" z=" 1.0" /><!-- Lower left -->
+          <Pos x="-1.0" y=" 0.0" z="-1.0" /><!-- Upper left -->
+          <Pos x=" 1.0" y=" 0.0" z="-1.0" /><!-- Upper right -->
+        </Viewplane>
+      </Viewport>
+      <Viewport user="frontUser"><!-- Front View -->
+        <Pos  x="0.0" y="0.0" />
+        <Size x="0.5" y="0.5" />
+        <Viewplane>
+          <Pos x="-1.0" y="-1.0" z=" 0.0" /><!-- Lower left -->
+          <Pos x="-1.0" y=" 1.0" z=" 0.0" /><!-- Upper left -->
+          <Pos x=" 1.0" y=" 1.0" z=" 0.0" /><!-- Upper right -->
+        </Viewplane>
+      </Viewport>
+      <Viewport user="rightUser"><!-- Right View -->
+        <Pos  x="0.5" y="0.0" />
+        <Size x="0.5" y="0.5" />
+        <Viewplane>
+          <Pos x=" 0.0" y="-1.0" z=" 1.0" /><!-- Lower left -->
+          <Pos x=" 0.0" y=" 1.0" z=" 1.0" /><!-- Upper left -->
+          <Pos x=" 0.0" y=" 1.0" z="-1.0" /><!-- Upper right -->
+        </Viewplane>
+      </Viewport>
+    </Window>
+  </Node>
+  
+  <User eyeSeparation="0.060">
+    <Pos x="0.0" y="0.0" z="1.0" />
+    <Tracking tracker="Aruco" device="Head" />
+  </User>
+  <User name="topUser">
+    <Pos x="0.0" y="2.0" z="0.0" />
+  </User>
+  <User name="frontUser">
+    <Pos x="0.0" y="0.0" z="2.0" />
+  </User>
+  <User name="rightUser">
+    <Pos x="2.0" y="0.0" z="0.0" />
+  </User>
+  
+  <Tracker name="Aruco">
+    <Device name="Wand">
+      <Sensor id="0" vrpnAddress="Cubes@itn-vortex.ad.liu.se:3884" />
+      <Buttons count="10" vrpnAddress="gamepad@itn-vortex.ad.liu.se" />
+      <Axes count="7" vrpnAddress="gamepad@itn-vortex.ad.liu.se" />
+    </Device>
+    <Device name="Head">
+      <Sensor id="1" vrpnAddress="Cubes@itn-vortex.ad.liu.se:3884" />
+    </Device>
+    <Matrix x0="-0.10107 " y0="-0.98744  " z0="-0.121434" w0=" 0.00854036"
+            x1="-0.822302" y1=" 0.0142081" z1=" 0.568873" w1=" 0.517474  "
+            x2="-0.560003" y2=" 0.157352 " z2="-0.813411" w2="-0.131339  "
+            x3=" 0       " y3=" 0        " z3=" 0       " w3=" 1         " />
+  </Tracker>
+  
+</Cluster>
